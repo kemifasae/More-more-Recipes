@@ -2,7 +2,7 @@
 //import express from "express";
 //const route = express();
 
-module.exports = app => {
+
    
     global.recipes = [
         {id: 1, name: "Rice"}, {id: 2, name: "Rice"}, {id: 3, name: "Rice"}, {id: 4, name: "Beans"},];
@@ -111,4 +111,4 @@ module.exports = app => {
         }
     });
        
-};
+export default app;
