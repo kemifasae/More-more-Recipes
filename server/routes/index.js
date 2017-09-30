@@ -1,6 +1,9 @@
 
-module.exports = app => {
-    app.get("/", (req, res) => {
+import app from "../index";
+
+
+    app:get("/", (req, res) => {
     res.json({status: "Running away"});
-    });
-};
+    })
+
+    export default app;

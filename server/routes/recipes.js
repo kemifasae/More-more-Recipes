@@ -1,13 +1,12 @@
 //import models from '../models/recipes'
 //import express from "express";
 //const route = express();
+import app from "../index";
+import route from "riot-route";
 
-
-   
-    global.recipes = [
-        {id: 1, name: "Rice"}, {id: 2, name: "Rice"}, {id: 3, name: "Rice"}, {id: 4, name: "Beans"},];
-
-        
+global.recipes = [
+    {id: 1, name: "Rice"}, {id: 2, name: "Rice"}, {id: 3, name: "Rice"}, {id: 4, name: "Beans"},];
+     
     //const Recipes = app.models.recipes;
 
    
@@ -31,7 +30,7 @@
                 message: "Success",
                 error: false
             });
-        })
+        }),
     
 
     app.route("/recipes/:id")
@@ -78,7 +77,7 @@
                         error: true
                     });
             }
-        });
+        }),
         
     app.route("/recipes/:id/reviews")
     .get((req,res)=>{
@@ -109,6 +108,8 @@
                     error: true
                 });
         }
-    });
+    })
        
+};
+
 export default app;
